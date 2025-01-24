@@ -3,8 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <h1>Авторизация</h1>
+    <form>
+        <div class="form-container">
+            <div class="input-container" >
+                <div id="login-container"></div>
+                <label class="label" for="login" id="label-login">Введите логин</label>
+                <input required class="input" id="login" onfocusin="ReduceLabel(this)" onfocusout="IncreaseLabel(this)"/>
+            </div>
+            <div class="input-container">
+                <div id="password-container"></div>
+                <label class="label" for="password" id="label-password">Введите пароль</label>
+                <input required class="input" type="password" id="password" onfocusin="ReduceLabel(this)" onfocusout="IncreaseLabel(this)"/>
+            </div>
+            <button class='btn' type="submit" name="login">Войти в аккаунт</button>
+            <div class="separator"></div>
+            <button class='btn-register' type="submit" name="register">Зарегистрироватьcя</button>
+        </div>
+    </form>
+    <script>
+        function ReduceLabel(block) {
+            const blockLabelId = 'label-' + block.id;
+            const blockLabel = document.getElementById(blockLabelId);
+            blockLabel.classList.add('focused');
+        }
 
+        function IncreaseLabel(block) {
+            if (block.value === '') {
+                const blockLabelId = 'label-' + block.id;
+                const blockLabel = document.getElementById(blockLabelId);
+                blockLabel.classList.remove('focused');
+            }
+        }
+    </script>
 </body>
 </html>
