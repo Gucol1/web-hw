@@ -1,3 +1,26 @@
+
+
+@media (max-width: 440px){
+    :root {
+        --font-size-base: 52px;
+        --font-size-h1: 50px;
+        --font-size-h2: 90px;
+        --font-size-footer: 32px;
+        --social-btn-size: 55px;
+    }
+}
+
+@media (min-width: 441px){
+    :root {
+        --font-size-base: 32px;
+        --font-size-h1: 30px;
+        --font-size-h2: 50px;
+        --font-size-footer: 16px;
+        --social-btn-size: 35px;
+    }
+}
+
+
 html, body{
     height:100%;
     margin: 0;
@@ -38,13 +61,14 @@ html, body{
 }
 
 .footer-info{
-    font-size: 15px;
+    font-size: var(--font-size-footer);
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     color: #e1e1e1;
 }
 
 .form-container{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,25 +90,37 @@ body{
 }
 
 .title{
-    font-size: 30px;
+    font-size: var(--font-size-h1);
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    color: #e1e1e1;
+    color: crimson;
+}
+
+#title{
+    animation: title-animation 2s infinite ease-in-out;
 }
 
 .form-title{
-    font-size: 50px;
+    font-size: var(--font-size-h2);
     font-family: 'Montserrat', sans-serif;
     margin: 0 0 10px 0;
     color: #e1e1e1;
 }
 
 .input, .btn, .label, .btn-register{
+    font-size: var(--font-size-base);
+}
+
+.input{
     font-family: "Courier New", Courier, monospace;
-    font-size: 30px;
+}
+
+.btn, .label, .btn-register{
+    font-family: 'Montserrat', sans-serif;
 }
 
 .input-container{
+    width: 100%;
     padding: 3px;
     border-radius: 5px;
     display: flex;
@@ -106,8 +142,22 @@ body{
         color: #4fd518;
         transition: 0.2s;
     }
+}
 
+#checkbox{
+    width: var(--social-btn-size);
+    height: var(--social-btn-size);
+    appearance: none;
+    border-radius: 5px;
+}
 
+#checkbox:focus{
+    border: #ffffff 1px solid;
+    border-radius: 15px;
+}
+
+#checkbox:checked{
+    background-color: #4fd518;
 }
 
 .input{
@@ -134,8 +184,8 @@ body{
 }
 
 .social-button{
-    width: 35px;
-    height: 35px;
+    width: var(--social-btn-size);
+    height: var(--social-btn-size);
     padding: 0;
     appearance: none;
     border: none;
@@ -154,9 +204,10 @@ body{
     transform: scale(1.1);
 }
 
+
 .btn-image{
-    width: 35px;
-    height: 35px;
+    width: var(--social-btn-size);
+    height: var(--social-btn-size);
 }
 
 .btn{
@@ -172,8 +223,12 @@ body{
     transition: 0.2s ease all;
 }
 
-.btn:hover{
+.btn:hover, .btn:focus{
     box-shadow: 0 0 0 3px #e18f3b, 0 0 0 6px #df2c2c, 0 0 0 9px #c3318f, 0 0 0 12px #5d25af;
+}
+
+.btn:active{
+    background: transparent;
 }
 
 div.separator{
@@ -201,5 +256,19 @@ div.separator{
     }
     100% {
         background-position: 1800px 2000px, 1600px 1600px, 1400px 1200px;
+    }
+}
+
+@keyframes title-animation {
+    from {
+        color: crimson;
+    }
+
+    50%{
+        color: white;
+    }
+
+    to{
+        color: crimson;
     }
 }
