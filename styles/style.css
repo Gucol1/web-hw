@@ -115,8 +115,22 @@ body{
     font-family: "Courier New", Courier, monospace;
 }
 
-.btn, .label, .btn-register{
+.btn, .label, .btn-register, #password-note{
     font-family: 'Montserrat', sans-serif;
+}
+
+#password-note{
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.error{
+    color: #9a4f4f;
+}
+
+.success{
+    color: #84c95e;
 }
 
 .input-container{
@@ -271,4 +285,16 @@ div.separator{
     to{
         color: crimson;
     }
+}
+
+
+particle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 112;
 }
