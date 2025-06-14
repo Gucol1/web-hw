@@ -2,42 +2,43 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Web-hw</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <h1>Авторизация</h1>
-    <form>
-        <div class="form-container">
-            <div class="input-container" >
-                <div id="login-container"></div>
-                <label class="label" for="login" id="label-login">Введите логин</label>
-                <input required class="input" id="login" onfocusin="ReduceLabel(this)" onfocusout="IncreaseLabel(this)"/>
-            </div>
-            <div class="input-container">
-                <div id="password-container"></div>
-                <label class="label" for="password" id="label-password">Введите пароль</label>
-                <input required class="input" type="password" id="password" onfocusin="ReduceLabel(this)" onfocusout="IncreaseLabel(this)"/>
-            </div>
-            <button class='btn' type="submit" name="login">Войти в аккаунт</button>
-            <div class="separator"></div>
-            <button class='btn-register' type="submit" name="register">Зарегистрироватьcя</button>
+<header class="header">
+    <h1 class="title">HEADER</h1>
+</header>
+<div class="snow-block"></div>
+<main class="container">
+    <h2 class="form-title">Авторизация</h2>
+    <form class="form-container">
+        <div class="input-container">
+            <label class="label" for="login" id="label-login">Логин</label>
+            <input required class="input" id="login" placeholder="Введите логин"/>
         </div>
+        <div class="input-container">
+            <label class="label" for="password" id="label-password">Пароль</label>
+            <input required class="input" type="password" id="password" placeholder="Введите пароль"/>
+        </div>
+        <div class="checkbox-container">
+            <input class="input" type="checkbox" id="checkbox"/>
+            <label class="label" for="checkbox" id="label-checkbox">Сохранять сессию</label>
+        </div>
+        <button class='btn' type="submit" name="login" aria-controls="message">Войти в аккаунт</button>
     </form>
-    <script>
-        function ReduceLabel(block) {
-            const blockLabelId = 'label-' + block.id;
-            const blockLabel = document.getElementById(blockLabelId);
-            blockLabel.classList.add('focused');
-        }
+    <section class="social-container">
+        <button class="social-button vk-btn"><img class="btn-image" src="images/vk.png"></button>
+        <button class="social-button ya-btn"><img class="btn-image" src="images/yandex.png"></button>
+        <button class="social-button google-btn"><img class="btn-image" src="images/google.png"></button>
+    </section>
+</main>
+<footer class="footer">
+    <section class="footer-info">
+        Гуцол Степан Дмитриевич РИС-22-3
+    </section>
 
-        function IncreaseLabel(block) {
-            if (block.value === '') {
-                const blockLabelId = 'label-' + block.id;
-                const blockLabel = document.getElementById(blockLabelId);
-                blockLabel.classList.remove('focused');
-            }
-        }
-    </script>
+</footer>
+
 </body>
 </html>
