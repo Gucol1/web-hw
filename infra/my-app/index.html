@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Web-hw</title>
+		<link rel="stylesheet" href="src/style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="title" id="title">HEADER</h1>
+		</header>
+		<div class="snow-block"></div>
+		<main class="container">
+			<h2 class="form-title">Авторизация</h2>
+			<form class="form-container">
+				<div class="input-container">
+					<label class="label" for="email" id="label-login">Логин</label>
+					<input
+						required
+						class="input"
+						type="email"
+						id="email"
+						placeholder="example@mail.com"
+					/>
+				</div>
+				<div class="input-container">
+					<label class="label" for="password" id="label-password">Пароль</label>
+					<input
+						required
+						class="input"
+						type="password"
+						id="password"
+						placeholder="Введите пароль"
+						onInput="checkPassword(this.value)"
+					/>
+					<p id="password-note">Длина пароля должна быть 8 или более символов</p>
+				</div>
+				<div class="checkbox-container">
+					<input class="input" type="checkbox" id="checkbox" />
+					<label class="label" for="checkbox" id="label-checkbox"
+						>Сохранять сессию</label
+					>
+				</div>
+				<button id="btn" class="btn" type="button" name="login" data-type="shadow">
+					Войти в аккаунт
+				</button>
+			</form>
+			<section class="social-container">
+				<button class="social-button vk-btn">
+					<img class="btn-image" src="images/vk.png" />
+				</button>
+				<button class="social-button ya-btn">
+					<img class="btn-image" src="images/yandex.png" />
+				</button>
+				<button class="social-button google-btn">
+					<img class="btn-image" src="images/google.png" />
+				</button>
+			</section>
+		</main>
+		<footer class="footer">
+			<section class="footer-info">Гуцол Степан Дмитриевич РИС-22-3</section>
+		</footer>
+		<script type="module" src="src/easterEgg.ts"></script>
+		<script type="module" src="src/script.ts"></script>
+		<script type="module" src="src/particle.js"></script>
+	</body>
+</html>
