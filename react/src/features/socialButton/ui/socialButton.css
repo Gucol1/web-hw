@@ -1,0 +1,26 @@
+.social-button{
+    width: var(--social-btn-size);
+    height: var(--social-btn-size);
+    padding: 0;
+    appearance: none;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.social-button:hover, .social-button:focus{
+    cursor: pointer;
+    transition: 0.2s;
+    transform: scale(1.1);
+}
+
+
+.btn-image{
+    width: var(--social-btn-size);
+    height: var(--social-btn-size);
+}

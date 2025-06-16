@@ -1,0 +1,35 @@
+@media (max-width: 440px){
+    :root {
+        --font-size-base: 52px;
+        --font-size-h1: 50px;
+        --font-size-h2: 90px;
+        --font-size-footer: 32px;
+        --social-btn-size: 55px;
+    }
+}
+
+@media (min-width: 441px){
+    :root {
+        --font-size-base: 32px;
+        --font-size-h1: 30px;
+        --font-size-h2: 50px;
+        --font-size-footer: 16px;
+        --social-btn-size: 35px;
+    }
+}
+
+:root{
+    --background: #1a1b23;
+    --btn-primary: #000000;
+}
+
+particle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 112;
+}

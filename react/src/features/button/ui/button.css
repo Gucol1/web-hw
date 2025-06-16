@@ -1,0 +1,36 @@
+.btn{
+    width: 100%;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    background: var(--btn-primary);
+    color:white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px 10px 5px 10px;
+    transition: 0.2s ease all;
+}
+
+.btn:hover, .btn:focus{
+    box-shadow: 0 0 0 3px #e18f3b, 0 0 0 6px #df2c2c, 0 0 0 9px #c3318f, 0 0 0 12px #5d25af;
+}
+
+.btn:active{
+    background: transparent;
+}
+
+.btn{
+    font-size: var(--font-size-base);
+}
+
+.btn{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.error{
+    color: #9a4f4f;
+}
+
+.success{
+    color: #84c95e;
+}
